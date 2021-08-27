@@ -1,8 +1,8 @@
 .container {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	width: 155px;
-	height: 155px;
+	width: 153px;
+	height: 153px;
 	border: 1px;
 	margin: auto;
 }
