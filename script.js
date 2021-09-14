@@ -25,7 +25,7 @@ function printText(div) {
 	} 
 }
 
-function text(number) { 
+function showPlayerTurn(number) { 
 	if (number % 2 == 0) {
 		var newText = document.createTextNode("X");
 	} else {
