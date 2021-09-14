@@ -14,6 +14,7 @@ function createCell() {
 		}
 	}
 }
+
 function printText(div) { 
 	if (status == 0) {
 		if (div.innerHTML == "") {
@@ -23,6 +24,7 @@ function printText(div) {
 		}
 	} 
 }
+
 function text(number) { 
 	if (number % 2 == 0) {
 		var newText = document.createTextNode("X");
@@ -31,6 +33,7 @@ function text(number) {
 	}
 	return newText;
 }
+
 function checkWinner(cellText) { 
 	var row = (cellText.id).charAt(1);
 	var col = (cellText.id).charAt(2);
@@ -66,6 +69,7 @@ function checkWinner(cellText) {
 	} 
 	return 1;
 }
+
 function getGameResult(cell) {
 	if (checkWinner(cell) == 0 && nrCell > 4) { 
 		printResult(cell);
@@ -73,6 +77,7 @@ function getGameResult(cell) {
 		printResult("1");     
 	} 
 }
+
 function printResult(variable) { 
 	if (variable == 1) {
 		message.innerHTML = "Remiza!";
