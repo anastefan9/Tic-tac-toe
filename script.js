@@ -7,25 +7,25 @@ function createCell() {
 	for (var i = 1; i <= 3; ++i) {
 		for (var j = 1; j <= 3; ++j) {
 			const object = document.getElementById("container");
-			const newDiv = document.createElement("div");
-			newDiv.onclick = function() {printText(newDiv)};
-			newDiv.setAttribute("id", "C" + i + j);
-			container.appendChild(newDiv);
+			const div = document.createElement("div");
+			div.onmousedown = function() {onclick(event, div)};
+			div.setAttribute("id", "C" + i + j);
+			object.appendChild(div);
 		}
 	}
 }
 
-function printText(div) { 
+function onclick(event, div) {
 	if (status == 0) {
 		if (div.innerHTML == "") {
-			div.appendChild(text(nrCell)); 
+			div.appendChild(printXor0(nrCell)); 
 			++nrCell;
 			getGameResult(div); 
 		}
 	} 
 }
 
-function showPlayerTurn(number) { 
+function printXor0(number) { 
 	if (number % 2 == 0) {
 		var newText = document.createTextNode("X");
 	} else {
